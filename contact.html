@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - AuraWear</title>
+    <title>Contact Us - AuraWear</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Your Shopping Cart</h1>
+        <h1>Contact AuraWear</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,12 +20,17 @@
         </nav>
     </header>
     <main>
-        <section class="cart-items">
-            <h2>Items in Your Cart</h2>
-            <div class="cart-grid">
-                <!-- Cart items will be dynamically loaded here -->
-            </div>
-            <button onclick="checkout()">Checkout</button>
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
     <footer>

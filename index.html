@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraWear - Home</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        header { background: #333; color: white; padding: 1rem; text-align: center; }
-        nav { display: flex; justify-content: space-between; padding: 1rem; background: #444; color: white; }
-        nav ul { list-style: none; display: flex; padding: 0; }
-        nav ul li { margin: 0 15px; }
-        nav ul li a { color: white; text-decoration: none; }
-        .container { padding: 2rem; text-align: center; }
-        .btn { background: #333; color: white; padding: 10px 15px; border: none; cursor: pointer; }
-        .btn:hover { background: #555; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Welcome to AuraWear</h1>
-        <p>Elevate Your Style with Our Exclusive Collection</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Staff Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="staff-login.html">Staff Login</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container">
-        <h2>Discover the Latest Trends</h2>
-        <p>Browse our latest collections and find the perfect outfit for any occasion.</p>
-        <a href="shop.html" class="btn">Shop Now</a>
-    </div>
+    <main>
+        <section class="hero">
+            <h2>Discover Your Style with AuraWear</h2>
+            <p>Explore our latest collection of trendy and comfortable clothes.</p>
+            <button onclick="shopNow()">Shop Now</button>
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product items will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AuraWear</p>
+    </footer>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - AuraWear</title>
+    <title>Staff Login - AuraWear</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="supabase.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Your Shopping Cart</h1>
+        <h1>Staff Login</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,12 +21,16 @@
         </nav>
     </header>
     <main>
-        <section class="cart-items">
-            <h2>Items in Your Cart</h2>
-            <div class="cart-grid">
-                <!-- Cart items will be dynamically loaded here -->
-            </div>
-            <button onclick="checkout()">Checkout</button>
+        <section class="login-form">
+            <h2>Login to Manage Orders</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
         </section>
     </main>
     <footer>

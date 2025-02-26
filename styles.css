@@ -2,60 +2,51 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
 }
 
 header {
-  background: #333;
-  color: white;
-  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background: #444;
-  color: white;
-}
-
 nav ul {
-  list-style: none;
-  display: flex;
+  list-style-type: none;
   padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #ff9800;
-}
-
-.container {
-  padding: 2rem;
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0;
   text-align: center;
 }
 
-.btn {
-  background: #333;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
+.featured-products, .about-us, .contact-form, .login-form, .cart-items {
+  padding: 20px;
 }
 
-.btn:hover {
-  background: #ff9800;
+.product-grid, .cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }

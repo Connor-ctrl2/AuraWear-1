@@ -1,6 +1,6 @@
 // Initialize Supabase
-const supabaseUrl = 'https://your-supabase-url.supabase.co';
-const supabaseKey = 'your-supabase-key';
+const supabaseUrl = 'https://wxkcwkkxxscsfwhbzypr.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4a2N3a2t4eHNjc2Z3aGJ6eXByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA1Nzg5ODMsImV4cCI6MjA1NjE1NDk4M30.JVpWkVsyX2aOiAnQKB7vv0CcGEsfXumHi0FXohFsLiY';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 document.getElementById('login-form').addEventListener('submit', async (event) => {

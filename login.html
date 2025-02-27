@@ -22,15 +22,21 @@
     </header>
     <main>
         <section class="login-form">
-            <h2>Login to Manage Orders</h2>
-            <form id="login-form">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-            <p id="login-message"></p>
+            <div class="login-container">
+                <h2>Login to Manage Orders</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="login-message"></p>
+            </div>
         </section>
     </main>
     <footer>

@@ -28,6 +28,13 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 .hero {
   background-image: url('hero.jpg');
   background-size: cover;

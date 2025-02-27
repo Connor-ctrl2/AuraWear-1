@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const { user, error } = await supabase.auth.signIn({
+    const { user, error } = await supabase.auth.signInWithPassword({
         email: email,
         password: password
     });
@@ -18,6 +18,8 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         loginMessage.textContent = `Error: ${error.message}`;
     } else {
         loginMessage.textContent = 'Login successful!';
+        localStorage.setItem('loggedIn', 'true');
+        document.getElementById('login-text').textContent = 'Logged In';
         // Redirect to admin dashboard or order management page
         window.location.href = 'admin.html';
     }

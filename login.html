@@ -15,7 +15,12 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Staff Login</a></li>
+                <li id="login-status">
+                    <a href="login.html">
+                        <img src="person-icon.png" alt="Login Status" class="icon">
+                        <span id="login-text">Staff Login</span>
+                    </a>
+                </li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
@@ -46,5 +51,37 @@
     <footer>
         <p>&copy; 2025 AuraWear</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginText = document.getElementById('login-text');
+            const loginStatus = localStorage.getItem('loggedIn');
+
+            if (loginStatus === 'true') {
+                loginText.textContent = 'Logged In';
+            }
+        });
+
+        document.getElementById('login-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const { user, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            const loginMessage = document.getElementById('login-message');
+            if (error) {
+                loginMessage.textContent = `Error: ${error.message}`;
+            } else {
+                loginMessage.textContent = 'Login successful!';
+                localStorage.setItem('loggedIn', 'true');
+                document.getElementById('login-text').textContent = 'Logged In';
+                // Redirect to admin dashboard or order management page
+                window.location.href = 'admin.html';
+            }
+        });
+    </script>
 </body>
 </html>
